@@ -1,0 +1,29 @@
+---
+const { paginationDetails } = Astro.props;
+---
+
+<div class="flex gap-4 items-center justify-center mt-20">
+  <a
+    class:list={[
+      {
+        "bg-slate-300 text-slate-200 cursor-not-allowed":
+          !paginationDetails.url.prev,
+        "bg-green-300": paginationDetails.url.prev,
+      },
+      "pt-3 pb-3 pl-10 pr-10 ",
+    ]}
+    href={paginationDetails.url.prev}>Prev</a
+  >
+
+  <a
+    class:list={[
+      {
+        "bg-slate-300 text-slate-200 cursor-not-allowed":
+          !paginationDetails.url.next,
+        "bg-green-300": paginationDetails.url.next,
+      },
+      "pt-3 pb-3 pl-10 pr-10 mt-30",
+    ]}
+    href={paginationDetails.url.next}>Next</a
+  >
+</div>

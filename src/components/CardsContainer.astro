@@ -1,0 +1,58 @@
+---
+const { postsMetaData, showMore, tag } = Astro.props;
+import BlogCard from "./BlogCard.astro";
+---
+
+<div class="bg-slate-50 lg:p-10 mt-3 lg:mt-10">
+  <h1
+    class:list={[
+      "text-2xl lg:text-3xl font-bold mb-2",
+      {
+        hidden: !showMore,
+      },
+    ]}
+  >
+    Latest posts
+  </h1>
+  <div class="cardsContainer">
+    {
+      postsMetaData.map((card) => {
+        return (
+          <BlogCard
+            cardImageUrl={card.imageUrl}
+            heading={card.title}
+            bodyText={card.description}
+            author={card.author}
+            tags={card.tags}
+            publishedDate={card.date}
+          />
+        );
+      })
+    }
+    <div
+      class:list={[
+        "h-full w-full flex justify-center items-center",
+        {
+          hidden: !showMore,
+        },
+      ]}
+    >
+      <a class="font-semibold" href="/posts">See more</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .cardsContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

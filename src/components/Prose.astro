@@ -1,0 +1,37 @@
+---
+const { metaData } = Astro.props;
+---
+
+<div class="prose mx-auto md:prose-lg">
+  <h1>{metaData.title}</h1>
+  <div class="flex items-center gap-3">
+    <img class="image-author" src={metaData.authorImageUrl} />
+    <div class="flex flex-col">
+      <span class="font-bold text-sm">{metaData.author}</span>
+      <span class="font-light text-sm"
+        >Published on: <span class="font-bold"
+          >{new Date(metaData.date).toLocaleDateString()}</span
+        ></span
+      >
+    </div>
+  </div>
+  <slot />
+</div>
+
+<style is:global>
+  .image-author {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    object-fit: cover;
+  }
+  .blog-image {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  figcaption {
+    text-align: center;
+  }
+</style>

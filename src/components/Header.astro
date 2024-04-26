@@ -1,0 +1,186 @@
+---
+
+---
+
+<div class="sticky top-0 z-20 bg-white py-5 w-full">
+  <nav class="wrapper">
+    <div class="subgrid">
+      <div class="searchWrapper">
+        <object class="searchIcon" data="public/search.svg" type="image/svg+xml"
+        ></object>
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
+    <div class="subgrid grid2 sm:justify-start">
+      <span class="fancy text-xl md:text-3xl">GOURAV'S SHELF</span>
+    </div>
+
+    <div class="subgrid grid3">
+      <div class="contactIconsWrapper">
+        <a href="https://www.linkedin.com/in/golfsierra/" target="_blank">
+          <object
+            class="contactIcon"
+            data="../../public/linkedin.svg"
+            type="image/svg+xml"></object>
+          <span>Linkedin</span>
+        </a>
+
+        <a href="https://www.medium.com/@golfsierra" target="_blank">
+          <object
+            class="contactIcon"
+            data="../../public/medium.svg"
+            type="image/svg+xml"></object>
+          <span>Medium</span>
+        </a>
+
+        <a href="https://www.github.com/golfsierraAI/" target="_blank">
+          <object
+            class="contactIcon"
+            data="../../public/github.svg"
+            type="image/svg+xml"></object>
+          <span>Github</span>
+        </a>
+
+        <a href="mailto:gourav.npm@gmail.com" target="_blank">
+          <object
+            class="contactIcon"
+            data="../../public/email.svg"
+            type="image/svg+xml"></object>
+          <span>Email</span>
+        </a>
+
+        <div id="closeIcon" class="h-6 md:hidden absolute right-5 w-6"></div>
+      </div>
+    </div>
+
+    <div id="hamburger" class="h-7 w-10 md:hidden absolute top-0 right-0"></div>
+  </nav>
+</div>
+
+<script is:inline>
+  document.getElementById("hamburger").addEventListener("click", () => {
+    document.getElementsByClassName("grid3")[0].style.right = "0";
+  });
+
+  document.getElementById("closeIcon").addEventListener("click", () => {
+    document.getElementsByClassName("grid3")[0].style.right = "-100%";
+  });
+</script>
+
+<style>
+  .wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .searchWrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .contactIcon {
+    height: 1.5rem;
+    scale: 1;
+    transition: all 0.5s;
+    pointer-events: none;
+  }
+
+  .contactIcon:hover {
+    scale: 1.2;
+  }
+
+  .contactIconsWrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+  }
+
+  .searchIcon {
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    border: 1px solid gray;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .subgrid {
+    display: flex;
+    flex: 1;
+  }
+
+  .grid2 {
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+  }
+
+  .grid3 {
+    justify-content: flex-end;
+    transition: all 0.3s;
+  }
+  a {
+    span {
+      display: none;
+    }
+  }
+
+  #hamburger {
+    background-image: url("../../public/hamburger.svg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  #closeIcon {
+    background-image: url("../../public/close.svg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .grid3 {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      height: 100lvh;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 2rem;
+      width: 70%;
+      z-index: 200;
+    }
+    a {
+      display: flex;
+      font-weight: 700;
+      align-items: center;
+      gap: 0.8rem;
+      span {
+        display: block;
+      }
+    }
+
+    .contactIconsWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .subgrid:nth-child(1) {
+      display: none;
+    }
+  }
+</style>

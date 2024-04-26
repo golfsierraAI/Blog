@@ -1,0 +1,45 @@
+---
+import MainLayout from "../Layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import CardsContainer from "../components/CardsContainer.astro";
+import LatestCard from "../components/LatestCard.astro";
+
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blogs");
+
+const postsMetaData = allPosts.map((post) => post.data);
+const card = postsMetaData[0];
+---
+
+<MainLayout title="Gourav's Shelf">
+  <Header />
+  <h1 class:list={["text-2xl lg:text-3xl font-bold mt-4 lg:mt-10"]}>
+    Trending post
+  </h1>
+  <div class="md:hidden">
+    <CardsContainer
+      postsMetaData={postsMetaData.slice(1).slice(0, 1)}
+      showMore={false}
+    />
+  </div>
+  <div class="hidden md:block">
+    <LatestCard metaData={postsMetaData[0]} />
+  </div>
+
+  <CardsContainer
+    postsMetaData={postsMetaData.slice(1).slice(0, postsMetaData.length - 2)}
+    showMore={true}
+  />
+</MainLayout>
+
+<style is:global>
+  * {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+</style>

@@ -1,0 +1,42 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "../../Layouts/MainLayout.astro";
+import CardsContainer from "../../components/CardsContainer.astro";
+import Header from "../../components/Header.astro";
+import { slugify } from "../../utils/utils";
+import Pagination from "../../components/Pagination.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await getCollection("blogs");
+  const routes = allPosts.map((post) => {
+    const { title } = post.data;
+
+    return {
+      params: { page: slugify(title) },
+      props: { post },
+    };
+  });
+  return paginate(routes, {
+    pageSize: 3,
+  });
+}
+
+const { page } = Astro.props;
+const postsMetaData = page.data.map((item) => item.props.post.data);
+---
+
+<MainLayout title="posts">
+  <Header />
+  <CardsContainer postsMetaData={postsMetaData} showMore={false} />
+  <Pagination
+    paginationDetails={{
+      start: page.start,
+      end: page.end,
+      size: page.size,
+      total: page.total,
+      currentPage: page.currentPage,
+      lastPage: page.lastPage,
+      url: page.url,
+    }}
+  />
+</MainLayout>

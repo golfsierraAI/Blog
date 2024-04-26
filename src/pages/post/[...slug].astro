@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "../../Layouts/MainLayout.astro";
+import Prose from "../../components/Prose.astro";
+import Header from "../../components/Header.astro";
+import { slugify } from "../../utils/utils";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blogs");
+  const routes = allPosts.map((post) => {
+    const { title } = post.data;
+
+    return {
+      params: { slug: slugify(title) },
+      props: { post },
+    };
+  });
+  return routes;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<MainLayout title={post.data.title}>
+  <Header />
+  <div class="mb-8 mt-8 mx-auto w-11/12">
+    <Prose metaData={post.data}>
+      <Content />
+    </Prose>
+  </div>
+</MainLayout>

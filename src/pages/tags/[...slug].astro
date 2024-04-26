@@ -1,0 +1,35 @@
+---
+import MainLayout from "../../Layouts/MainLayout.astro";
+import Header from "../../components/Header.astro";
+import CardsContainer from "../../components/CardsContainer.astro";
+
+import { slugify } from "../../utils/utils";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blogs");
+  const tags = new Set(allPosts.map((post) => post.data.tags).flat());
+
+  const routes = [...tags].map((tag) => {
+    const postsByTags = allPosts.filter(
+      (post) => post.data.tags.indexOf(tag) !== -1
+    );
+
+    return {
+      params: { slug: slugify(tag) },
+      props: { tag, postsByTags },
+    };
+  });
+
+  return routes;
+}
+
+const { tag, postsByTags } = Astro.props;
+
+const postsMetaData = postsByTags.map((post) => post.data);
+---
+
+<MainLayout title={tag}>
+  <Header />
+  <CardsContainer tag={tag} postsMetaData={postsMetaData} />
+</MainLayout>
