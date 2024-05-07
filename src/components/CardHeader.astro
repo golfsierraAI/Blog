@@ -1,9 +1,20 @@
 ---
+import { Picture } from "astro:assets";
+
 const { cardImageUrl } = Astro.props;
 ---
 
 <div class="header_post">
-  <img src={cardImageUrl} alt="" />
+  <Picture
+    src={cardImageUrl}
+    formats={["avif", "webp"]}
+    class="header_image"
+    decoding="async"
+    loading="lazy"
+    height={"400"}
+    width={"800"}
+    alt="Header image for this card"
+  />
 </div>
 
 <style>
@@ -13,7 +24,7 @@ const { cardImageUrl } = Astro.props;
     position: relative;
     top: 0;
 
-    img {
+    .header_image {
       position: absolute;
       top: 0;
       left: 0;

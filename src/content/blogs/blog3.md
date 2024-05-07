@@ -10,7 +10,7 @@ tags:
   - Accessibility
 ---
 
-<img class="blog-image" src="https://images.pexels.com/photos/341013/pexels-photo-341013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image text"/>
+<img class="blog-image" src="https://images.pexels.com/photos/341013/pexels-photo-341013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Blog header image"/>
 
 Website accessibility is a crucial aspect of frontend development, ensuring that all users, including those with disabilities, can access and navigate web content effectively. One essential technique for improving accessibility is the use of ARIA landmarks. In this blog post, we'll explore what ARIA landmarks are and how to implement them to enhance the accessibility of your website.
 

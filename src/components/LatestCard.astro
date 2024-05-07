@@ -1,4 +1,5 @@
 ---
+import { Image, Picture } from "astro:assets";
 import { slugify } from "../utils/utils";
 
 const { metaData } = Astro.props;
@@ -20,7 +21,16 @@ const { metaData } = Astro.props;
       </p>
     </div>
     <div class="flex-1 lg:mt-0">
-      <img class="h-full float-end" src={metaData.imageUrl} />
+      <Picture
+        class="h-full float-end"
+        src={metaData.imageUrl}
+        decoding="async"
+        loading="lazy"
+        formats={["avif", "webp"]}
+        height={"400"}
+        width={"800"}
+        alt="Header image for latest card"
+      />
     </div>
   </div>
 </a>

@@ -11,7 +11,7 @@ tags:
 ---
 
 <figure>
-  <img class="blog-image" src="https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Alt text" title="a title">
+  <img class="blog-image" src="https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Blog header image">
   <figcaption>This is a caption for the image.</figcaption>
 </figure>
 
