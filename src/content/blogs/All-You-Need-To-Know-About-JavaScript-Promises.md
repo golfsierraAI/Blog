@@ -6,8 +6,10 @@ tags:
   - JavaScript
   - Frontend
 description: >-
-  JavaScript promises are one of those things that we come across more often
-  than it seems.
+  JavaScript, often hailed as the language of the web, has evolved significantly
+  over the years. From its humble beginnings as a simple scripting language for
+  web pages, it has grown into a powerful and versatile tool used by developers
+  to create dynamic and interactive web applications.
 imageUrl: >-
   https://images.unsplash.com/photo-1714907135093-e60f0a730574?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 authorImageUrl: 'https://miro.medium.com/v2/resize:fill:110:110/1*PSwC19ClehTGmCyJshMUdg.jpeg'
