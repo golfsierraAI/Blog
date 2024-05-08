@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npx tinacms dev -c \"astro dev --port 4321\"",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "tinacms build && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
