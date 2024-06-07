@@ -14,7 +14,7 @@ import BlogCard from "./BlogCard.astro";
   >
     Latest posts
   </h1>
-  <div class="cardsContainer">
+  <div class="gap-4 md:grid grid-cols-3 md:gap-8 ">
     {
       postsMetaData.map((card) => {
         return (
@@ -41,18 +41,3 @@ import BlogCard from "./BlogCard.astro";
     </div>
   </div>
 </div>
-
-<style>
-  .cardsContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 2rem;
-  }
-
-  @media only screen and (max-width: 600px) {
-    .cardsContainer {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

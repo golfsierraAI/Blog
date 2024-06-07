@@ -11,7 +11,7 @@ console.log(metaData.authorImageUrl);
     <Picture
       src={metaData.authorImageUrl}
       alt="Image for Author"
-      class="image-author"
+      class="rounded-full w-12 h-12 m-0 object-cover"
       decoding="async"
       loading="lazy"
       formats={["avif", "webp"]}
@@ -31,13 +31,6 @@ console.log(metaData.authorImageUrl);
 </div>
 
 <style is:global>
-  .image-author {
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    object-fit: cover;
-  }
   .blog-image {
     max-height: 400px;
     width: 100%;

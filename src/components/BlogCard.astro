@@ -5,27 +5,7 @@ import CardBody from "./CardBody.astro";
 const { cardImageUrl, heading, bodyText, author, tags } = Astro.props;
 ---
 
-<div class="post">
+<div class="min-h-[530px] flex overflow-hidden flex-col relative">
   <CardHeader cardImageUrl={cardImageUrl} />
   <CardBody heading={heading} bodyText={bodyText} author={author} tags={tags} />
 </div>
-
-<style>
-  .post {
-    min-height: 530px;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    position: relative;
-
-    &:hover {
-      .header_post {
-        margin-top: -20px;
-      }
-
-      .body_post {
-        height: 50%;
-      }
-    }
-  }
-</style>

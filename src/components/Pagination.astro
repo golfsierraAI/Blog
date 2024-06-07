@@ -6,13 +6,13 @@ const { paginationDetails } = Astro.props;
   <a
     class:list={[
       {
-        "bg-slate-300 text-slate-200 cursor-not-allowed":
+        "bg-slate-300 text-slate-500 cursor-not-allowed":
           !paginationDetails.url.prev,
-        "bg-green-300": paginationDetails.url.prev,
+        "bg-[#ADD899]": paginationDetails.url.prev,
       },
-      "pt-3 pb-3 pl-10 pr-10 ",
+      "py-2 px-10 rounded-sm",
     ]}
-    href={paginationDetails.url.prev}>Prev</a
+    href={paginationDetails.url.prev}>Previous</a
   >
 
   <a
@@ -20,9 +20,9 @@ const { paginationDetails } = Astro.props;
       {
         "bg-slate-300 text-slate-200 cursor-not-allowed":
           !paginationDetails.url.next,
-        "bg-green-300": paginationDetails.url.next,
+        "bg-[#ADD899]": paginationDetails.url.next,
       },
-      "pt-3 pb-3 pl-10 pr-10 mt-30",
+      "py-2 px-10 rounded-sm",
     ]}
     href={paginationDetails.url.next}>Next</a
   >
