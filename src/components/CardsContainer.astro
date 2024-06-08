@@ -1,12 +1,12 @@
 ---
-const { postsMetaData, showMore, tag } = Astro.props;
+const { postsMetaData, showMore } = Astro.props;
 import BlogCard from "./BlogCard.astro";
 ---
 
-<div class="p-3 lg:p-10">
+<div class="p-3 lg:p-10 bg-neutral-100">
   <h1
     class:list={[
-      "text-2xl lg:text-3xl font-bold mb-3",
+      "text-2xl lg:text-3xl font-bold mb-5",
       {
         hidden: !showMore,
       },
