@@ -2,7 +2,6 @@
 date: 2024-06-07T18:30:00.000Z
 author: Gourav sharma
 tags:
-  - Web Development
   - Tutorial
   - Frontend
 description: >-
