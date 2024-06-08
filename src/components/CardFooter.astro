@@ -6,7 +6,7 @@ import { slugify } from "../utils/utils";
 <div class="container_infos w-full flex justify-between absolute bottom-0 border-t border-t-slate-600 pt-6">
   <div class="postedBy flex flex-col uppercase tracking-wide text-xs">
     <span class="text-xs uppercase opacity-50 tracking-wide font-bold">author</span>
-    <span class="text-sm uppercase opacity-100 font-normal mt-2 tracking-wide">{author}</span>
+    <span class="text-xs uppercase opacity-100 font-normal mt-2 tracking-wide">{author}</span>
   </div>
   <div class="flex flex-col">
     <span class="text-xs uppercase opacity-50 tracking-wide font-bold">tags</span>
@@ -25,3 +25,58 @@ import { slugify } from "../utils/utils";
     </div> 
   </div>
 </div>
+
+<style>
+
+
+      .tags {
+        ul {
+          display: flex;
+          margin-top: 0.5rem;
+          li {
+            font-size: 10px;
+            letter-spacing: 2px;
+            list-style: none;
+            margin-left: 8px;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+
+            &:first-child {
+              margin-left: 0px;
+            }
+
+            &:before {
+              content: "";
+              text-align: center;
+              width: 100%;
+              height: 5px;
+              background: #fc6042;
+              opacity: 0.5;
+              position: absolute;
+              bottom: 0;
+              z-index: -1;
+              padding: 0px 1px;
+              -webkit-transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+              -moz-transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+              -ms-transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+              -o-transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+              transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+            }
+
+            &:hover:before {
+              height: 18px;
+            }
+          }
+        }
+      }
+    
+</style>

@@ -4,11 +4,11 @@ import { Picture } from "astro:assets";
 const { cardImageUrl } = Astro.props;
 ---
 
-<div class="header_post w-full h-[40%] relative top-0">
+<div class="header_post w-full relative top-0">
   <Picture
     src={cardImageUrl}
     formats={["avif", "webp"]}
-    class="absolute top-0 left-0 w-full h-full object-cover"
+    class="absolute top-0 left-0 object-cover"
     decoding="async"
     loading="lazy"
     height={"600"}

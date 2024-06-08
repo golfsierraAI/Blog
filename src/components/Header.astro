@@ -6,19 +6,19 @@ import ThemeToggle from "./ThemeToggle.astro"
   
   <nav class="wrapper flex items-center justify-center">
     <div class="subgrid flex flex-1">
-      <div class="searchWrapper w-full relative">
+      <!-- <div class="searchWrapper w-full relative">
         <object class="searchIcon h-4 absolute top-[50%] left-[3%] translate-y-[-50%]" data="/search.svg" type="image/svg+xml"
         ></object>
         <input type="text" placeholder="Search..." />
-      </div>
+      </div> -->
     </div>
-    <div class="subgrid grid2 flex-[2] items-center justify-start md:justify-center ">
-      <span class="text-xl md:text-3xl">GOURAV'S SHELF</span>
+    <div class="subgrid grid2 flex-[2] items-center justify-start lg:justify-center ">
+      <span class="text-xl lg:text-3xl">GOURAV'S SHELF</span>
     </div>
 
     <div class="subgrid grid3 justify-end transition-all duration-300">
       <div class="contactIconsWrapper flex gap-8 items-end">
-        <ThemeToggle />
+        <!-- <ThemeToggle /> -->
         <a href="https://www.linkedin.com/in/golfsierra/" target="_blank">
           <object class="contactIcon" data="/linkedin.svg" type="image/svg+xml"
           ></object>
@@ -43,11 +43,11 @@ import ThemeToggle from "./ThemeToggle.astro"
           <span>Email</span>
         </a>
 
-        <div id="closeIcon" class="h-6 md:hidden absolute right-5 w-6"></div>
+        <div id="closeIcon" class="h-6 lg:hidden absolute right-5 w-6"></div>
       </div>
     </div>
 
-    <div id="hamburger" class="h-7 w-10 md:hidden absolute top-0 right-0"></div>
+    <div id="hamburger" class="h-7 w-10 lg:hidden absolute top-0 right-0"></div>
   </nav>
 </div>
 

@@ -24,7 +24,7 @@ const { Content } = await post.render();
 
 <MainLayout title={post.data.title}>
   <Header />
-  <div class="mb-8 mt-8 mx-auto w-11/12">
+  <div class="lg:w-[70%] my-8 prose lg:prose-lg mx-auto">
     <Prose metaData={post.data}>
       <Content />
     </Prose>
