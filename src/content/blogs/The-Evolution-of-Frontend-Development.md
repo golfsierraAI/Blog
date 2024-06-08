@@ -18,6 +18,7 @@ title: The Evolution of Frontend Development
 ![A mountain range with snow capped mountains in the background](https://images.unsplash.com/photo-1717684566059-4d16b456c72a?q=80\&w=2069\&auto=format\&fit=crop\&ixlib=rb-4.0.3\&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 <figcaption>A mountain range with snow capped mountains in the background</figcaption>
+
 ## Introduction
 
 Frontend development has evolved dramatically, transforming the way we create and interact with web applications. From static HTML pages to dynamic single-page applications, the journey of frontend technologies has been fascinating and impactful. In this blog post, we will explore some of the key advancements in frontend development that have shaped modern web experiences.
