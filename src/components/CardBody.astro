@@ -6,12 +6,12 @@ const { heading, bodyText, author, tags } = Astro.props;
 ---
 
 <div
-  class="w-full h-[65%] bg-white absolute bottom-0 flex items-center justify-center cursor-pointer"
+  class="w-full h-[65%] bg-white dark:bg-gray-950 absolute bottom-0 flex items-center justify-center cursor-pointer"
 >
   <a class="no-underline text-black" href=`/post/${slugify(heading)}/`>
-    <div class="post_content w-[90%] h-[90%] bg-white relative">
-      <h1 class="text-xl font-bold mb-2">{heading}</h1>
-      <p class="text-sm font-normal">{bodyText}</p>
+    <div class="post_content w-[90%] h-[90%] bg-white dark:bg-gray-950 relative">
+      <h1 class="text-xl font-bold mb-2 dark:text-white">{heading}</h1>
+      <p class="text-sm font-normal dark:text-white">{bodyText}</p>
       <CardFooter author={author} tags={tags} />
     </div>
   </a>

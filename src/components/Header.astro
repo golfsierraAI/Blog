@@ -2,7 +2,7 @@
 import ThemeToggle from "./ThemeToggle.astro"
 ---
 
-<div class="sticky top-0 z-20 bg-white py-5 w-full">
+<div class="sticky top-0 z-20 bg-white py-5 w-full dark:text-white dark:bg-black">
   
   <nav class="wrapper flex items-center justify-center">
     <div class="subgrid flex flex-1">
@@ -13,12 +13,12 @@ import ThemeToggle from "./ThemeToggle.astro"
       </div> -->
     </div>
     <div class="subgrid grid2 flex-[2] items-center justify-start lg:justify-center ">
-      <span class="text-xl lg:text-3xl">GOURAV'S SHELF</span>
+      <a class="text-xl lg:text-3xl cursor-pointer" href="/">GOURAV'S SHELF</a>
     </div>
 
     <div class="subgrid grid3 justify-end transition-all duration-300">
       <div class="contactIconsWrapper flex gap-8 items-end">
-        <!-- <ThemeToggle /> -->
+        <ThemeToggle />
         <a href="https://www.linkedin.com/in/golfsierra/" target="_blank">
           <object class="contactIcon" data="/linkedin.svg" type="image/svg+xml"
           ></object>

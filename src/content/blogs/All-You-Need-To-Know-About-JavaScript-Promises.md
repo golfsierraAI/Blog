@@ -12,9 +12,13 @@ description: >-
   to create dynamic and interactive web applications.
 imageUrl: >-
   https://images.unsplash.com/photo-1714907135093-e60f0a730574?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-authorImageUrl: 'https://miro.medium.com/v2/resize:fill:110:110/1*PSwC19ClehTGmCyJshMUdg.jpeg'
+authorImageUrl: "https://miro.medium.com/v2/resize:fill:110:110/1*PSwC19ClehTGmCyJshMUdg.jpeg"
 title: All You Need To Know About JavaScript Promises
 ---
+
+![Golden Gate Bridge, Golden Gate Bridge, San Francisco, CA, USA](https://images.unsplash.com/photo-1714907135093-e60f0a730574?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+<figcaption>A sky full of stars</figcaption>
 
 ## Introduction
 

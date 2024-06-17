@@ -9,8 +9,8 @@ const { metaData } = Astro.props;
   <div
     class="cursor-pointer flex lg:flex-row flex-col-reverse lg:h-96 w-full mb-10 lg:mt-10 gap-2 lg:gap-20"
   >
-    <div class="flex-1">
-      <p class="font-bold text-gray-400">
+    <div class="flex-1 dark:text-white">
+      <p class="font-bold text-gray-400 dark:text-white">
         {new Date(metaData.date).toLocaleDateString()}
       </p>
       <h2 class="text-2xl lg:text-5xl font-bold lg:mt-4">
