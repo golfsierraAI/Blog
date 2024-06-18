@@ -1,53 +1,37 @@
 ---
+import Icon from "./CustomIcon.astro";
 import ThemeToggle from "./ThemeToggle.astro"
+
+const icons = [
+  {href:"https://www.linkedin.com/in/golfsierra/", target: "_blank", name:"Linkedin"},
+  {href:"https://www.medium.com/@golfsierra", target: "_blank", name:"Medium"},
+  {href:"https://www.github.com/golfsierraAI/", target: "_blank", name:"Github"},
+  {href:"mailto:gourav.npm@gmail.com", target: "_blank", name:"Email"},
+
+  ]
 ---
 
-<div class="sticky top-0 z-20 bg-white py-5 w-full dark:text-white dark:bg-black">
+<div class="sticky top-0 z-20 bg-white py-5 w-full dark:text-white dark:bg-black transition-colors duration-500">
   
   <nav class="wrapper flex items-center justify-center">
     <div class="subgrid flex flex-1">
-      <!-- <div class="searchWrapper w-full relative">
-        <object class="searchIcon h-4 absolute top-[50%] left-[3%] translate-y-[-50%]" data="/search.svg" type="image/svg+xml"
-        ></object>
-        <input type="text" placeholder="Search..." />
-      </div> -->
     </div>
     <div class="subgrid grid2 flex-[2] items-center justify-start lg:justify-center ">
       <a class="text-xl lg:text-3xl cursor-pointer" href="/">GOURAV'S SHELF</a>
     </div>
 
-    <div class="subgrid grid3 justify-end transition-all duration-300">
+    <div class="subgrid grid3 justify-end dark:bg-black bg-white transition-colors duration-500">
       <div class="contactIconsWrapper flex gap-8 items-end">
         <ThemeToggle />
-        <a href="https://www.linkedin.com/in/golfsierra/" target="_blank">
-          <object class="contactIcon" data="/linkedin.svg" type="image/svg+xml"
-          ></object>
-          <span>Linkedin</span>
-        </a>
 
-        <a href="https://www.medium.com/@golfsierra" target="_blank">
-          <object class="contactIcon" data="/medium.svg" type="image/svg+xml"
-          ></object>
-          <span>Medium</span>
-        </a>
-
-        <a href="https://www.github.com/golfsierraAI/" target="_blank">
-          <object class="contactIcon" data="/github.svg" type="image/svg+xml"
-          ></object>
-          <span>Github</span>
-        </a>
-
-        <a href="mailto:gourav.npm@gmail.com" target="_blank">
-          <object class="contactIcon" data="/email.svg" type="image/svg+xml"
-          ></object>
-          <span>Email</span>
-        </a>
-
-        <div id="closeIcon" class="h-6 lg:hidden absolute right-5 w-6"></div>
+        {icons.map(({name, target, href})=><Icon href={href} target={target} name={name} />
+        )
+      }
+        <div id="closeIcon" class="h-6 lg:hidden absolute right-5 w-6 mix-blend-exclusion"></div>
       </div>
     </div>
 
-    <div id="hamburger" class="h-7 w-10 lg:hidden absolute top-0 right-0"></div>
+    <div id="hamburger" class="h-7 w-10 lg:hidden absolute top-0 right-0 mix-blend-exclusion"></div>
   </nav>
 </div>
 
@@ -73,15 +57,6 @@ import ThemeToggle from "./ThemeToggle.astro"
     position: relative;
   }
 
-  .contactIcon {
-    height: 1.5rem;
-    transform: scale(1);
-    transition: all 0.5s;
-  }
-
-  .contactIcon:hover {
-    transform: scale(1.2);
-  }
 
   .contactIconsWrapper {
     display: flex;
@@ -121,13 +96,8 @@ import ThemeToggle from "./ThemeToggle.astro"
 
   .grid3 {
     justify-content: flex-end;
-    transition: all 0.3s;
   }
-  a {
-    span {
-      display: none;
-    }
-  }
+
 
   #hamburger {
     background-image: url("/hamburger.svg");
@@ -146,7 +116,6 @@ import ThemeToggle from "./ThemeToggle.astro"
       position: fixed;
       top: 0;
       right: -100%;
-      background-color: white;
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -156,15 +125,6 @@ import ThemeToggle from "./ThemeToggle.astro"
       padding: 2rem;
       width: 70%;
       z-index: 200;
-    }
-    a {
-      display: flex;
-      font-weight: 700;
-      align-items: center;
-      gap: 0.8rem;
-      span {
-        display: block;
-      }
     }
 
     .contactIconsWrapper {
