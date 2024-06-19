@@ -11,19 +11,18 @@ const icons = [
   ]
 ---
 
-<div class="sticky top-0 z-20 bg-white py-5 w-full dark:text-white dark:bg-black transition-colors duration-500">
+<div class="sticky top-0 z-20 bg-white py-5 w-full dark:text-white text-black dark:bg-black transition-colors duration-700">
   
   <nav class="wrapper flex items-center justify-center">
     <div class="subgrid flex flex-1">
     </div>
     <div class="subgrid grid2 flex-[2] items-center justify-start lg:justify-center ">
-      <a class="text-xl lg:text-3xl cursor-pointer" href="/">GOURAV'S SHELF</a>
+      <a class="text-xl md:text-3xl cursor-pointer" href="/">GOURAV'S SHELF</a>
     </div>
 
-    <div class="subgrid grid3 justify-end dark:bg-black bg-white transition-colors duration-500">
+    <div class="subgrid grid3 justify-end dark:bg-black bg-white transition-all duration-700">
       <div class="contactIconsWrapper flex gap-8 items-end">
         <ThemeToggle />
-
         {icons.map(({name, target, href})=><Icon href={href} target={target} name={name} />
         )
       }
@@ -72,17 +71,6 @@ const icons = [
     transform: translateY(-50%);
   }
 
-  input {
-    width: 100%;
-    padding: 0.5rem 2rem;
-    border-radius: 20px;
-    border: 1px solid gray;
-  }
-
-  input:focus {
-    outline: none;
-  }
-
   .subgrid {
     display: flex;
     flex: 1;
@@ -111,7 +99,7 @@ const icons = [
     background-size: cover;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1024px) {
     .grid3 {
       position: fixed;
       top: 0;

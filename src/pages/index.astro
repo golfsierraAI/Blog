@@ -14,8 +14,8 @@ const card = postsMetaData[0];
 
 <MainLayout title="Gourav's Shelf" >
   <Header />
-  <div class="lg:hidden mt-[20px]">
-    <h1 class:list={["text-2xl lg:text-3xl font-bold lg:mt-10 p-3 dark:text-white"]}>
+  <div class="md:hidden mt-[20px]">
+    <h1 class:list={["text-2xl md:text-3xl font-bold md:mt-10 p-3 dark:text-white text-black transition-colors duration-700"]}>
     Trending post
   </h1>
     <CardsContainer
@@ -23,10 +23,10 @@ const card = postsMetaData[0];
       showMore={false}
     />
   </div>
-  <div class="hidden lg:block">
+  <div class="hidden md:block">
     <LatestCard metaData={postsMetaData[0]} />
   </div>
-  <div class="lg:mt-[200px]">
+  <div class="md:mt-[200px]">
   <CardsContainer
     postsMetaData={postsMetaData.slice(1).slice(0, 2)}
     showMore={true}
