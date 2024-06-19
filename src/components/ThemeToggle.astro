@@ -27,9 +27,9 @@
 
 <script is:inline>
   const toggleClassName = "theme-toggle--toggled";
-const button = document.querySelector("button");
+  const button = document.querySelector("button");
 
-if(document.documentElement.classList.contains("dark")){
+if(document.documentElement.classList.contains("dark") || localStorage.getItem("theme")==="dark"){
   button.classList.toggle(toggleClassName)
 }
 
@@ -37,8 +37,10 @@ button.addEventListener("click", (e) => {
 	e.currentTarget.classList.toggle(toggleClassName);
   if(document.documentElement.classList.contains("dark")){
     document.documentElement.classList.remove('dark');
+    localStorage.setItem("theme", "light")
   } else{
     document.documentElement.classList.add('dark');
+    localStorage.setItem("theme", "dark")
   }
   
 });
