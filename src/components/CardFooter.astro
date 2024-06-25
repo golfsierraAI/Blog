@@ -3,13 +3,13 @@ const { author, tags } = Astro.props;
 import { slugify } from "../utils/utils";
 ---
 
-<div class="w-full flex justify-between absolute bottom-0 border-t dark:border-t-slate-100 border-t-slate-600 pt-6 transition-colors duration-700">
+<div class="w-full flex justify-between absolute bottom-0 border-t dark:border-t-slate-100 border-t-slate-600 pt-6">
   <div class="flex flex-col uppercase tracking-wide text-xs min-h-10">
-    <span class="text-xs uppercase opacity-50 tracking-wide font-bold dark:text-white text-black transition-colors duration-700">author</span>
-    <span class="text-xs uppercase opacity-100 font-normal mt-2 tracking-wide dark:text-white text-black transition-colors duration-700">{author}</span>
+    <span class="text-xs uppercase opacity-50 tracking-wide font-bold dark:text-white text-black ">author</span>
+    <span class="text-xs uppercase opacity-100 font-normal mt-2 tracking-wide dark:text-white text-black ">{author}</span>
   </div>
   <div class="flex flex-col uppercase tracking-wide text-xs min-h-10">
-    <span class="text-xs uppercase opacity-50 tracking-wide font-bold dark:text-white text-black transition-colors duration-700">tags</span>
+    <span class="text-xs uppercase opacity-50 tracking-wide font-bold dark:text-white text-black">tags</span>
     <div class="tags">
       <ul class="flex mt-2">
         {
@@ -33,7 +33,7 @@ import { slugify } from "../utils/utils";
               text-align: center;
               width: 100%;
               height: 5px;
-              background: #fc6042;
+              background: #42fce6;
               opacity: 0.5;
               position: absolute;
               bottom: 0;

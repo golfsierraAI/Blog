@@ -13,15 +13,15 @@ const icons = [
 
 <div class="sticky top-0 z-20 bg-white py-5 w-full dark:text-white text-black dark:bg-black transition-colors duration-700">
   
-  <nav class="wrapper flex items-center justify-center">
-    <div class="subgrid flex flex-1">
+  <nav class="flex items-center justify-center relative">
+    <div class="flex flex-1">
     </div>
-    <div class="subgrid grid2 flex-[2] items-center justify-start lg:justify-center ">
-      <a class="text-xl md:text-3xl cursor-pointer" href="/">GOURAV'S SHELF</a>
+    <div class="flex flex-[2] items-center justify-start lg:justify-center">
+      <a class="text-xl lg:text-3xl cursor-pointer" href="/">GOURAV'S SHELF</a>
     </div>
 
-    <div class="subgrid grid3 justify-end dark:bg-black bg-white transition-all duration-700">
-      <div class="contactIconsWrapper flex gap-8 items-end">
+    <div class="grid3 flex flex-1 lg:flex-row flex-col lg:static fixed bg-white dark:bg-black lg:justify-end top-0 right-[-100%] h-[100lvh] lg:h-min w-[70%] lg:w-min z-20 transition-all duration-700 justify-start items-start gap-8 p-8 lg:p-3">
+      <div class="flex lg:flex-row flex-col gap-8 justify-start items-start">
         <ThemeToggle />
         {icons.map(({name, target, href})=><Icon href={href} target={target} name={name} />
         )
@@ -45,47 +45,6 @@ const icons = [
 </script>
 
 <style>
-  .wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .searchWrapper {
-    width: 100%;
-    position: relative;
-  }
-
-
-  .contactIconsWrapper {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-end;
-  }
-
-  .searchIcon {
-    height: 1rem;
-    position: absolute;
-    top: 50%;
-    left: 3%;
-    transform: translateY(-50%);
-  }
-
-  .subgrid {
-    display: flex;
-    flex: 1;
-  }
-
-  .grid2 {
-    justify-content: center;
-    align-items: center;
-    flex: 2;
-  }
-
-  .grid3 {
-    justify-content: flex-end;
-  }
-
 
   #hamburger {
     background-image: url("/hamburger.svg");
@@ -97,31 +56,5 @@ const icons = [
     background-image: url("/close.svg");
     background-position: center;
     background-size: cover;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    .grid3 {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      height: 100lvh;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding: 2rem;
-      width: 70%;
-      z-index: 200;
-    }
-
-    .contactIconsWrapper {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .subgrid:nth-child(1) {
-      display: none;
-    }
   }
 </style>
