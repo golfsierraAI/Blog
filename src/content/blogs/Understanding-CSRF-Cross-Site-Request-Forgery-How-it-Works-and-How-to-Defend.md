@@ -2,6 +2,7 @@
 date: 2025-10-19T18:30:00.000Z
 author: Gourav Sharma
 tags:
+  - OWASP
   - Performance
   - Security
 description: >-
@@ -33,25 +34,25 @@ title: >-
 
 5\. \[Mitigations and best practices]\(#mitigations-and-best-practices)
 
-   \- \[1. SameSite cookies]\(#1-samesite-cookies)
+\- \[1. SameSite cookies]\(#1-samesite-cookies)
 
-   \- \[2. Synchronizer (CSRF) token / anti-CSRF token]\(#2-synchronizer-csrf-token--anti-csrf-token)
+\- \[2. Synchronizer (CSRF) token / anti-CSRF token]\(#2-synchronizer-csrf-token--anti-csrf-token)
 
-   \- \[3. Double-submit cookie]\(#3-double-submit-cookie)
+\- \[3. Double-submit cookie]\(#3-double-submit-cookie)
 
-   \- \[4. Check Origin/Referer headers]\(#4-check-originreferer-headers)
+\- \[4. Check Origin/Referer headers]\(#4-check-originreferer-headers)
 
-   \- \[5. Use custom headers + CORS]\(#5-use-custom-headers--cors)
+\- \[5. Use custom headers + CORS]\(#5-use-custom-headers--cors)
 
-   \- \[6. Frameworks / libraries / CSRF middleware]\(#6-frameworks--libraries--csrf-middleware)
+\- \[6. Frameworks / libraries / CSRF middleware]\(#6-frameworks--libraries--csrf-middleware)
 
 6\. \[Example mitigations — code snippets]\(#example-mitigations--code-snippets)
 
-   \- \[Express + csurf (synchronizer token pattern)]\(#express--csurf-synchronizer-token-pattern)
+\- \[Express + csurf (synchronizer token pattern)]\(#express--csurf-synchronizer-token-pattern)
 
-   \- \[SameSite cookie example]\(#samesite-cookie-example)
+\- \[SameSite cookie example]\(#samesite-cookie-example)
 
-   \- \[Double-submit cookie (illustrative)]\(#double-submit-cookie-illustrative)
+\- \[Double-submit cookie (illustrative)]\(#double-submit-cookie-illustrative)
 
 7\. \[Testing for CSRF]\(#testing-for-csrf)
 
@@ -91,12 +92,12 @@ CSRF typically targets \*state-changing\* operations (POST/PUT/DELETE) rather th
 
 \<!-- bank.example - account.html (vulnerable) -->
 
-\<form method="POST" action="https\://bank.example/transfer">
+\<form method="POST" action="[https://bank.example/transfer](https://bank.example/transfer)">
 
-  \<input type="hidden" name="to\_account" value="attacker-account-123">
+\<input type="hidden" name="to\_account" value="attacker-account-123">
 
-  \<input type="hidden" name="amount" value="1000">
+\<input type="hidden" name="amount" value="1000">
 
-  \<button type="submit">Transfer\</button>
+\<button type="submit">Transfer\</button>
 
 \</form>
