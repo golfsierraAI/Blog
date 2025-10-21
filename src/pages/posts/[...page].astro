@@ -7,7 +7,7 @@ import { slugify } from "../../utils/utils";
 import Pagination from "../../components/Pagination.astro";
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await getCollection("blogs");
+  const allPosts = (await getCollection("blogs")).sort((a, b) => new Date(b.date) > new Date(a.date) ? 1 : -1);
   const routes = allPosts.map((post) => {
     const { title } = post.data;
 

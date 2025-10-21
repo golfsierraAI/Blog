@@ -9,7 +9,8 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("blogs");
 
 const postsMetaData = allPosts.map((post) => post.data);
-const card = postsMetaData[0];
+const postsMetaDataSorted: any = postsMetaData.sort((a, b) => new Date(b.date) > new Date(a.date) ? 1 : -1);
+console.log(postsMetaDataSorted);
 ---
 
 <MainLayout title="Gourav's Shelf" >
@@ -19,16 +20,16 @@ const card = postsMetaData[0];
     Trending post
   </h1>
     <CardsContainer
-      postsMetaData={[postsMetaData.at(0)]}
+      postsMetaData={[postsMetaDataSorted.at(0)]}
       showMore={false}
     />
   </div>
   <div class="hidden lg:block">
-    <LatestCard metaData={postsMetaData[0]} />
+    <LatestCard metaData={postsMetaDataSorted.at(0)} />
   </div>
   <div class="lg:mt-[200px]">
   <CardsContainer
-    postsMetaData={postsMetaData.slice(1).slice(0, 2)}
+    postsMetaData={postsMetaDataSorted.slice(1).slice(0, 2)}
     showMore={true}
   />
   </div>
