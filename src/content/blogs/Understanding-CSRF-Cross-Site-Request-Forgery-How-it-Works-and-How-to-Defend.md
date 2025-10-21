@@ -16,10 +16,12 @@ title: >-
   Defend
 ---
 
-[https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg](https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg)
+![A road through a forest in autumn](https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg)
 
 <figcaption>A road through a forest in autumn</figcaption>
+
 ## Table of Contents
+
 1. [What is CSRF?](#what-is-csrf)
 2. [How CSRF Attacks Work](#how-csrf-attacks-work)
 3. [Real-World Examples](#real-world-examples)
