@@ -22,15 +22,15 @@ title: >-
 
 ## Table of Contents
 
-1. What is CSRF?
-2. How CSRF Attacks Work
-3. Real-World Examples
-4. CSRF Attack Scenarios
-5. Prevention Techniques
-6. Implementation Examples
-7. Testing for CSRF Vulnerabilities
-8. Best Practices
-9. Conclusion
+1. [What is CSRF?](#what-is-csrf)
+2. [How CSRF Attacks Work](#how-csrf-attacks-work)
+3. [Real-World Examples](#real-world-examples)
+4. [CSRF Attack Scenarios](#csrf-attack-scenarios)
+5. [Prevention Techniques](#prevention-techniques)
+6. [Implementation Examples](#implementation-examples)
+7. [Testing for CSRF Vulnerabilities](#testing-for-csrf-vulnerabilities)
+8. [Best Practices](#best-practices)
+9. [Conclusion](#conclusion)
 
 ***
 
