@@ -1087,7 +1087,3 @@ By understanding and implementing proper CSRF protection, you're taking a crucia
 *Stay secure, and happy coding! 🔒*
 
 ***
-
-**Author**: Your Name\
-**Date**: $(date +%Y-%m-%d)\
-**Tags**: #WebSecurity #CSRF #WebDevelopment #Security #CyberSecurity
